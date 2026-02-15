@@ -3,36 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M. AKHIRUDDIN SYAH | Profil Lucu Playful</title>
+
+<title>M. AKHIRUDDIN SYAH | Profil Resmi</title>
+<meta name="description" content="Profil resmi M. AKHIRUDDIN SYAH, dikenal sebagai M. Akhir. Pendidikan, visi, prestasi, core values, dan perjalanan pengembangan diri.">
+<meta name="keywords" content="M. AKHIRUDDIN SYAH, M. Akhir, Profil Resmi, Personal Branding, Padang Lawas Utara, SMP Negeri 1 Padang Bolak">
+<meta name="author" content="M. AKHIRUDDIN SYAH">
+
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
   background:#fff;
   color:#333;
   font-family:'Montserrat',sans-serif;
-  overflow:hidden;
-  position:relative;
+  scroll-behavior:smooth;
 }
 nav{
   position:fixed;
   width:100%;
-  background:rgba(255,182,193,0.95);
+  background:rgba(255,192,203,0.95);
   padding:15px;
   text-align:center;
   z-index:1000;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 nav a{
   color:#fff;
   margin:0 15px;
   text-decoration:none;
   font-size:14px;
+  letter-spacing:1px;
   font-weight:500;
   transition:0.3s;
 }
 nav a:hover{color:#333;}
 header{
-  height:80vh;
+  height:90vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -40,12 +47,10 @@ header{
   text-align:center;
   background:linear-gradient(180deg,#FFD1DC,#fff);
   animation:fade 2s ease-in-out;
-  position:relative;
-  overflow:hidden;
 }
 h1{font-family:'Cinzel',serif;font-size:48px;color:#FF69B4;letter-spacing:3px;margin-bottom:10px;}
 h2{color:#FF69B4;margin-bottom:20px;font-size:28px;text-align:center;}
-section{padding:60px 20px;max-width:1000px;margin:auto;}
+section{padding:80px 20px;max-width:1000px;margin:auto;}
 .card{
   background:#FFD1DC;
   padding:25px;
@@ -68,7 +73,28 @@ section{padding:60px 20px;max-width:1000px;margin:auto;}
   height:150px;
   object-fit:cover;
   border-radius:10px;
+  transition:transform 0.3s, box-shadow 0.3s;
   background:#FFD1DC;
+}
+.gallery img:hover{
+  transform:scale(1.05);
+  box-shadow:0 8px 25px rgba(255,105,180,0.5);
+}
+.button{
+  display:inline-block;
+  background:#FF69B4;
+  color:#fff;
+  padding:12px 25px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:15px;
+  transition:0.3s;
+  border-radius:8px;
+}
+.button:hover{
+  background:#fff;
+  color:#FF69B4;
+  border:2px solid #FF69B4;
 }
 footer{
   background:#FFD1DC;
@@ -79,73 +105,17 @@ footer{
   border-top:2px solid #FF69B4;
 }
 p{margin-bottom:15px;line-height:1.6;font-size:16px;}
-.love{
-  position:absolute;
-  width:20px;
-  height:20px;
-  background:red;
-  clip-path: polygon(50% 0%,61% 14%,75% 14%,85% 28%,100% 44%,75% 85%,50% 100%,25% 85%,0% 44%,15% 28%,25% 14%,39% 14%);
-  animation:fall 5s linear infinite;
-  opacity:0.8;
-}
-.ribbon{
-  position:absolute;
-  width:40px;
-  height:8px;
-  background:#FFB6C1;
-  border-radius:4px;
-  animation:ribbonMove linear infinite;
-  opacity:0.7;
-}
-.makhir{
-  position:absolute;
-  font-size:24px;
-  font-weight:bold;
-  color:#FF69B4;
-  opacity:0.8;
-  animation:nameFloat 8s linear infinite;
-  pointer-events:none;
-}
-.balloon{
-  position:absolute;
-  width:30px;
-  height:40px;
-  background:#FFC0CB;
-  border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
-  animation:balloonFloat linear infinite;
-  opacity:0.8;
-}
-.confetti{
-  position:absolute;
-  width:6px;
-  height:6px;
-  background:#FF69B4;
-  animation:confettiFall linear infinite;
-  opacity:0.8;
-}
-@keyframes fall{
-  0%{transform:translateY(-50px) rotate(0deg);}
-  100%{transform:translateY(110vh) rotate(360deg);}
-}
-@keyframes ribbonMove{
-  0%{transform:translateY(-50px) translateX(0px) rotate(0deg);}
-  100%{transform:translateY(110vh) translateX(200px) rotate(360deg);}
-}
-@keyframes nameFloat{
-  0%{transform:translateY(110vh) translateX(0px) rotate(0deg);}
-  100%{transform:translateY(-50px) translateX(300px) rotate(360deg);}
-}
-@keyframes balloonFloat{
-  0%{transform:translateY(110vh);}
-  100%{transform:translateY(-60px);}
-}
-@keyframes confettiFall{
-  0%{transform:translateY(-20px);}
-  100%{transform:translateY(110vh);}
+blockquote{
+  border-left:4px solid #FF69B4;
+  padding-left:15px;
+  font-style:italic;
+  color:#FF4081;
+  margin:15px 0;
 }
 @keyframes fade{from{opacity:0;}to{opacity:1;}}
 </style>
 </head>
+
 <body>
 
 <nav>
@@ -167,14 +137,15 @@ p{margin-bottom:15px;line-height:1.6;font-size:16px;}
 
 <section id="about">
 <h2>About</h2>
-<p><strong>M. AKHIRUDDIN SYAH</strong> dikenal sebagai M. Akhir, berasal dari Padang Lawas Utara, Sumatera Utara, fokus pada pengembangan diri, kepemimpinan, dan personal branding.</p>
+<p><strong>M. AKHIRUDDIN SYAH</strong> adalah individu yang dikenal sebagai M. Akhir. Ia berasal dari Padang Lawas Utara, Sumatera Utara, Indonesia, dan telah membangun reputasi sebagai pribadi yang fokus pada pengembangan diri, kepemimpinan, dan personal branding.</p>
+<p>Dengan konsistensi dan visi jangka panjang, M. AKHIRUDDIN SYAH menjadi inspirasi bagi remaja dan komunitas sekitarnya, menunjukkan bahwa kesuksesan lahir dari disiplin dan integritas yang tinggi.</p>
 </section>
 
 <section id="education">
 <h2>Education</h2>
 <div class="card">
 <h3>SMP Negeri 1 Padang Bolak</h3>
-<p>M. AKHIRUDDIN SYAH menempuh pendidikan dasar dan mengembangkan keterampilan akademik, sosial, dan kepemimpinan.</p>
+<p>Di SMP Negeri 1 Padang Bolak, M. AKHIRUDDIN SYAH menempuh pendidikan dasar dan mengembangkan keterampilan akademik, sosial, dan kepemimpinan. Sekolah ini menjadi fondasi awal bagi visi dan prestasinya di masa depan.</p>
 </div>
 </section>
 
@@ -188,7 +159,7 @@ p{margin-bottom:15px;line-height:1.6;font-size:16px;}
 
 <section id="vision">
 <h2>Vision</h2>
-<p>M. AKHIRUDDIN SYAH berkomitmen memberi dampak positif melalui kepemimpinan konsisten dan pengembangan diri berkelanjutan.</p>
+<p>M. AKHIRUDDIN SYAH berkomitmen untuk memberi dampak positif melalui kepemimpinan yang konsisten, pengembangan diri yang berkelanjutan, dan tindakan nyata. Ia percaya kesuksesan lahir dari integritas, disiplin, dan kemampuan menginspirasi orang lain.</p>
 </section>
 
 <section id="achievements">
@@ -212,7 +183,13 @@ p{margin-bottom:15px;line-height:1.6;font-size:16px;}
 <h2>Blog & Insights</h2>
 <div class="card">
 <h3>Menjadi Inspirasi Tanpa Kata</h3>
-<p>Tindakan lebih berarti daripada kata-kata.</p>
+<blockquote>"Tindakan lebih berarti daripada kata-kata." – Contoh nyata M. AKHIRUDDIN SYAH</blockquote>
+<p>Konsistensi dan ketekunan adalah kunci utama untuk membangun reputasi dan inspirasi di kalangan remaja.</p>
+</div>
+<div class="card">
+<h3>Membangun Brand Pribadi Sejak Dini</h3>
+<blockquote>"Nilai dan disiplin membangun fondasi kesuksesan." – M. AKHIRUDDIN SYAH</blockquote>
+<p>Pemahaman terhadap nilai, disiplin, dan visi jangka panjang membantu M. AKHIRUDDIN SYAH membangun personal branding yang kuat dan menginspirasi teman-temannya.</p>
 </div>
 </section>
 
@@ -224,53 +201,8 @@ p{margin-bottom:15px;line-height:1.6;font-size:16px;}
 </section>
 
 <footer>
-© 2026 M. AKHIRUDDIN SYAH – Profil Lucu Playful
+© 2026 M. AKHIRUDDIN SYAH – Profil Resmi
 </footer>
-
-<script>
-// Love, ribbon, nama
-for(let i=0;i<20;i++){
-  let heart=document.createElement('div');
-  heart.className='love';
-  heart.style.left=Math.random()*100+'vw';
-  heart.style.animationDuration=3+Math.random()*5+'s';
-  document.body.appendChild(heart);
-}
-for(let i=0;i<10;i++){
-  let rib=document.createElement('div');
-  rib.className='ribbon';
-  rib.style.left=Math.random()*100+'vw';
-  rib.style.animationDuration=4+Math.random()*6+'s';
-  document.body.appendChild(rib);
-}
-for(let i=0;i<15;i++){
-  let name=document.createElement('div');
-  name.className='makhir';
-  name.textContent='Makhir';
-  name.style.left=Math.random()*100+'vw';
-  name.style.fontSize=(12+Math.random()*20)+'px';
-  name.style.animationDuration=(6+Math.random()*5)+'s';
-  document.body.appendChild(name);
-}
-
-// Balon
-for(let i=0;i<10;i++){
-  let bal=document.createElement('div');
-  bal.className='balloon';
-  bal.style.left=Math.random()*100+'vw';
-  bal.style.animationDuration=5+Math.random()*5+'s';
-  document.body.appendChild(bal);
-}
-
-// Confetti
-for(let i=0;i<50;i++){
-  let conf=document.createElement('div');
-  conf.className='confetti';
-  conf.style.left=Math.random()*100+'vw';
-  conf.style.animationDuration=2+Math.random()*5+'s';
-  document.body.appendChild(conf);
-}
-</script>
 
 </body>
 </html>

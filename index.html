@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>M. AKHIRUDDIN SYAH | Profil Resmi</title>
-<meta name="description" content="Profil resmi M. AKHIRUDDIN SYAH, dikenal sebagai M. Akhir. Pendidikan, visi, prestasi, core values, dan perjalanan pengembangan diri.">
-<meta name="keywords" content="M. AKHIRUDDIN SYAH, M. Akhir, Profil Resmi, Personal Branding, Padang Lawas Utara, SMP Negeri 1 Padang Bolak">
+<title>M. AKHIRUDDIN SYAH | Web Lucu & Interaktif</title>
+<meta name="description" content="Profil lucu dan interaktif M. AKHIRUDDIN SYAH. Animasi cinta, pita-pita, dan fitur fun siap menghibur pengunjung.">
+<meta name="keywords" content="M. AKHIRUDDIN SYAH, M. Akhir, Web Lucu, Animasi Love, Pita Lucu, Interaktif, Personal Branding">
 <meta name="author" content="M. AKHIRUDDIN SYAH">
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
@@ -18,6 +18,8 @@ body{
   color:#333;
   font-family:'Montserrat',sans-serif;
   scroll-behavior:smooth;
+  overflow-x:hidden;
+  position:relative;
 }
 nav{
   position:fixed;
@@ -47,6 +49,7 @@ header{
   text-align:center;
   background:linear-gradient(180deg,#FFD1DC,#fff);
   animation:fade 2s ease-in-out;
+  overflow:hidden;
 }
 h1{font-family:'Cinzel',serif;font-size:48px;color:#FF69B4;letter-spacing:3px;margin-bottom:10px;}
 h2{color:#FF69B4;margin-bottom:20px;font-size:28px;text-align:center;}
@@ -90,6 +93,8 @@ section{padding:80px 20px;max-width:1000px;margin:auto;}
   margin-top:15px;
   transition:0.3s;
   border-radius:8px;
+  position:relative;
+  overflow:hidden;
 }
 .button:hover{
   background:#fff;
@@ -112,11 +117,62 @@ blockquote{
   color:#FF4081;
   margin:15px 0;
 }
+
+/* Hujan Love */
+.love{
+  position:absolute;
+  width:20px;
+  height:20px;
+  background:red;
+  clip-path: polygon(50% 0%, 61% 14%, 75% 14%, 85% 28%, 100% 44%, 75% 85%, 50% 100%, 25% 85%, 0% 44%, 15% 28%, 25% 14%, 39% 14%);
+  animation:fall 5s linear infinite;
+  opacity:0.8;
+  z-index:0;
+}
+@keyframes fall{
+  0%{transform:translateY(-50px) rotate(0deg);}
+  100%{transform:translateY(110vh) rotate(360deg);}
+}
+
+/* Animasi Pita */
+.ribbon{
+  position:absolute;
+  width:40px;
+  height:8px;
+  background:#FFB6C1;
+  border-radius:4px;
+  animation:ribbonMove linear infinite;
+  opacity:0.7;
+  z-index:0;
+}
+@keyframes ribbonMove{
+  0%{transform:translateY(-50px) translateX(0px) rotate(0deg);}
+  100%{transform:translateY(110vh) translateX(200px) rotate(360deg);}
+}
+
 @keyframes fade{from{opacity:0;}to{opacity:1;}}
 </style>
 </head>
-
 <body>
+
+<!-- Hearts & Ribbons -->
+<script>
+for(let i=0;i<30;i++){
+  let heart=document.createElement('div');
+  heart.className='love';
+  heart.style.left=Math.random()*100+'vw';
+  heart.style.animationDuration=3+Math.random()*5+'s';
+  heart.style.fontSize=10+Math.random()*20+'px';
+  document.body.appendChild(heart);
+}
+for(let i=0;i<20;i++){
+  let rib=document.createElement('div');
+  rib.className='ribbon';
+  rib.style.left=Math.random()*100+'vw';
+  rib.style.animationDuration=4+Math.random()*6+'s';
+  document.body.appendChild(rib);
+}
+</script>
 
 <nav>
 <a href="#about">About</a>
@@ -132,12 +188,12 @@ blockquote{
 <header>
 <h1>M. AKHIRUDDIN SYAH</h1>
 <p><em>Presence. Principle. Power.</em></p>
-<p>Profil resmi dan perjalanan pengembangan diri M. Akhir</p>
+<p>Profil lucu & interaktif M. Akhir</p>
 </header>
 
 <section id="about">
 <h2>About</h2>
-<p><strong>M. AKHIRUDDIN SYAH</strong> adalah individu yang dikenal sebagai M. Akhir. Ia berasal dari Padang Lawas Utara, Sumatera Utara, Indonesia, dan telah membangun reputasi sebagai pribadi yang fokus pada pengembangan diri, kepemimpinan, dan personal branding.</p>
+<p><strong>M. AKHIRUDDIN SYAH</strong> adalah individu yang dikenal sebagai M. Akhir. Ia berasal dari Padang Lawas Utara, Sumatera Utara, Indonesia, dan fokus pada pengembangan diri, kepemimpinan, dan personal branding.</p>
 <p>Dengan konsistensi dan visi jangka panjang, M. AKHIRUDDIN SYAH menjadi inspirasi bagi remaja dan komunitas sekitarnya, menunjukkan bahwa kesuksesan lahir dari disiplin dan integritas yang tinggi.</p>
 </section>
 
@@ -145,7 +201,7 @@ blockquote{
 <h2>Education</h2>
 <div class="card">
 <h3>SMP Negeri 1 Padang Bolak</h3>
-<p>Di SMP Negeri 1 Padang Bolak, M. AKHIRUDDIN SYAH menempuh pendidikan dasar dan mengembangkan keterampilan akademik, sosial, dan kepemimpinan. Sekolah ini menjadi fondasi awal bagi visi dan prestasinya di masa depan.</p>
+<p>M. AKHIRUDDIN SYAH menempuh pendidikan dasar dan mengembangkan keterampilan akademik, sosial, dan kepemimpinan.</p>
 </div>
 </section>
 
@@ -159,7 +215,7 @@ blockquote{
 
 <section id="vision">
 <h2>Vision</h2>
-<p>M. AKHIRUDDIN SYAH berkomitmen untuk memberi dampak positif melalui kepemimpinan yang konsisten, pengembangan diri yang berkelanjutan, dan tindakan nyata. Ia percaya kesuksesan lahir dari integritas, disiplin, dan kemampuan menginspirasi orang lain.</p>
+<p>M. AKHIRUDDIN SYAH berkomitmen memberi dampak positif melalui kepemimpinan yang konsisten, pengembangan diri berkelanjutan, dan tindakan nyata.</p>
 </section>
 
 <section id="achievements">
@@ -201,7 +257,7 @@ blockquote{
 </section>
 
 <footer>
-© 2026 M. AKHIRUDDIN SYAH – Profil Resmi
+© 2026 M. AKHIRUDDIN SYAH – Web Lucu & Interaktif
 </footer>
 
 </body>

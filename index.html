@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>M. AKHIRUDDIN SYAH | Profil Interaktif</title>
-<meta name="description" content="Profil interaktif M. AKHIRUDDIN SYAH, dengan animasi lucu, nama melayang, pita, hati, dan mini-game sederhana.">
+<meta name="description" content="Profil interaktif M. AKHIRUDDIN SYAH, game lucu, animasi love, pita, nama melayang, musik dan suara bebas hak cipta.">
 <meta name="keywords" content="M. AKHIRUDDIN SYAH, M. Akhir, Web Interaktif, Animasi, Mini Game, Personal Branding, Pink Pastel">
 <meta name="author" content="M. AKHIRUDDIN SYAH">
 
@@ -13,143 +12,28 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{
-  background:#fff;
-  color:#333;
-  font-family:'Montserrat',sans-serif;
-  scroll-behavior:smooth;
-  overflow-x:hidden;
-  position:relative;
-}
-nav{
-  position:fixed;
-  width:100%;
-  background:rgba(255,192,203,0.95);
-  padding:15px;
-  text-align:center;
-  z-index:1000;
-  box-shadow:0 2px 5px rgba(0,0,0,0.1);
-}
-nav a{
-  color:#fff;
-  margin:0 15px;
-  text-decoration:none;
-  font-size:14px;
-  letter-spacing:1px;
-  font-weight:500;
-  transition:0.3s;
-}
+body{background:#fff;color:#333;font-family:'Montserrat',sans-serif;scroll-behavior:smooth;overflow-x:hidden;position:relative;}
+nav{position:fixed;width:100%;background:rgba(255,192,203,0.95);padding:15px;text-align:center;z-index:1000;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+nav a{color:#fff;margin:0 15px;text-decoration:none;font-size:14px;letter-spacing:1px;font-weight:500;transition:0.3s;}
 nav a:hover{color:#333;}
-header{
-  height:90vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  background:linear-gradient(180deg,#FFD1DC,#fff);
-  overflow:hidden;
-}
+header{height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(180deg,#FFD1DC,#fff);overflow:hidden;}
 h1{font-family:'Cinzel',serif;font-size:48px;color:#FF69B4;letter-spacing:3px;margin-bottom:10px;}
 h2{color:#FF69B4;margin-bottom:20px;font-size:28px;text-align:center;}
 section{padding:80px 20px;max-width:1000px;margin:auto;}
-.card{
-  background:#FFD1DC;
-  padding:25px;
-  margin:15px 0;
-  border-left:4px solid #FF69B4;
-  transition:0.3s;
-  border-radius:10px;
-}
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 8px 20px rgba(255,105,180,0.3);
-}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:15px;
-}
-.gallery img{
-  width:100%;
-  height:150px;
-  object-fit:cover;
-  border-radius:10px;
-  background:#FFD1DC;
-}
-.gallery img:hover{
-  transform:scale(1.05);
-  box-shadow:0 8px 25px rgba(255,105,180,0.5);
-}
-.button{
-  display:inline-block;
-  background:#FF69B4;
-  color:#fff;
-  padding:12px 25px;
-  text-decoration:none;
-  font-weight:bold;
-  margin-top:15px;
-  transition:0.3s;
-  border-radius:8px;
-  position:relative;
-  overflow:hidden;
-}
-.button:hover{
-  background:#fff;
-  color:#FF69B4;
-  border:2px solid #FF69B4;
-}
-footer{
-  background:#FFD1DC;
-  text-align:center;
-  padding:30px;
-  font-size:14px;
-  color:#333;
-  border-top:2px solid #FF69B4;
-}
+.card{background:#FFD1DC;padding:25px;margin:15px 0;border-left:4px solid #FF69B4;transition:0.3s;border-radius:10px;}
+.card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(255,105,180,0.3);}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;}
+.gallery img{width:100%;height:150px;object-fit:cover;border-radius:10px;background:#FFD1DC;}
+.gallery img:hover{transform:scale(1.05);box-shadow:0 8px 25px rgba(255,105,180,0.5);}
+.button{display:inline-block;background:#FF69B4;color:#fff;padding:12px 25px;text-decoration:none;font-weight:bold;margin-top:15px;transition:0.3s;border-radius:8px;position:relative;overflow:hidden;}
+.button:hover{background:#fff;color:#FF69B4;border:2px solid #FF69B4;}
+footer{background:#FFD1DC;text-align:center;padding:30px;font-size:14px;color:#333;border-top:2px solid #FF69B4;}
 p{margin-bottom:15px;line-height:1.6;font-size:16px;}
-blockquote{
-  border-left:4px solid #FF69B4;
-  padding-left:15px;
-  font-style:italic;
-  color:#FF4081;
-  margin:15px 0;
-}
-
-/* Hujan Love */
-.love{
-  position:absolute;
-  width:20px;
-  height:20px;
-  background:red;
-  clip-path: polygon(50% 0%, 61% 14%, 75% 14%, 85% 28%, 100% 44%, 75% 85%, 50% 100%, 25% 85%, 0% 44%, 15% 28%, 25% 14%, 39% 14%);
-  animation:fall 5s linear infinite;
-  opacity:0.8;
-  z-index:0;
-}
-/* Ribbon */
-.ribbon{
-  position:absolute;
-  width:40px;
-  height:8px;
-  background:#FFB6C1;
-  border-radius:4px;
-  animation:ribbonMove linear infinite;
-  opacity:0.7;
-  z-index:0;
-}
-/* Nama melayang */
-.makhir{
-  position:absolute;
-  font-size:24px;
-  font-weight:bold;
-  color:#FF69B4;
-  opacity:0.8;
-  animation:nameFloat 8s linear infinite;
-  pointer-events:none;
-  z-index:0;
-}
-
+blockquote{border-left:4px solid #FF69B4;padding-left:15px;font-style:italic;color:#FF4081;margin:15px 0;}
+.love{position:absolute;width:20px;height:20px;background:red;clip-path: polygon(50% 0%,61% 14%,75% 14%,85% 28%,100% 44%,75% 85%,50% 100%,25% 85%,0% 44%,15% 28%,25% 14%,39% 14%);animation:fall 5s linear infinite;opacity:0.8;z-index:0;}
+.ribbon{position:absolute;width:40px;height:8px;background:#FFB6C1;border-radius:4px;animation:ribbonMove linear infinite;opacity:0.7;z-index:0;}
+.makhir{position:absolute;font-size:24px;font-weight:bold;color:#FF69B4;opacity:0.8;animation:nameFloat 8s linear infinite;pointer-events:none;z-index:0;}
+.scoreboard{position:fixed;top:90px;right:20px;font-size:20px;font-weight:bold;color:#FF69B4;}
 @keyframes fall{0%{transform:translateY(-50px) rotate(0deg);}100%{transform:translateY(110vh) rotate(360deg);}}
 @keyframes ribbonMove{0%{transform:translateY(-50px) translateX(0px) rotate(0deg);}100%{transform:translateY(110vh) translateX(200px) rotate(360deg);}}
 @keyframes nameFloat{0%{transform:translateY(110vh) translateX(0px) rotate(0deg);}100%{transform:translateY(-50px) translateX(300px) rotate(360deg);}}
@@ -185,9 +69,38 @@ for(let i=0;i<25;i++){
   document.body.appendChild(name);
 }
 
-// Mini game: catch Makhir
+// Mini game: Catch Makhir
+let score=0;
+const scoreboard=document.createElement('div');
+scoreboard.className='scoreboard';
+scoreboard.textContent='Score: 0';
+document.body.appendChild(scoreboard);
+
+const clickSound=new Audio('https://cdn.pixabay.com/download/audio/2022/03/15/audio_6a635e7a62.mp3?filename=button-2-7600.mp3');
+
+function spawnMakhir(){
+  let m=document.createElement('div');
+  m.className='makhir';
+  m.textContent='Makhir';
+  m.style.left=Math.random()*80+'vw';
+  m.style.top=Math.random()*80+'vh';
+  m.style.fontSize=(14+Math.random()*25)+'px';
+  m.style.cursor='pointer';
+  document.body.appendChild(m);
+  m.addEventListener('click',()=>{
+    score++;
+    scoreboard.textContent='Score: '+score;
+    createConfetti(parseFloat(m.style.left),parseFloat(m.style.top));
+    clickSound.play();
+    m.remove();
+  });
+  setTimeout(()=>{if(m.parentNode)m.remove();},4000);
+}
+setInterval(spawnMakhir,1500);
+
+// Confetti function
 function createConfetti(x,y){
-  for(let i=0;i<20;i++){
+  for(let i=0;i<15;i++){
     let c=document.createElement('div');
     c.style.position='absolute';
     c.style.width='6px';
@@ -219,11 +132,16 @@ function createConfetti(x,y){
 <h1>M. AKHIRUDDIN SYAH</h1>
 <p><em>Presence. Principle. Power.</em></p>
 <p>Profil interaktif M. Akhir</p>
+<button class="button" onclick="music.play()">Play Music 🎵</button>
+<audio id="music" src="https://cdn.pixabay.com/audio/2022/03/15/audio_0e2d2290d1.mp3"></audio>
+<script>
+const music=document.getElementById('music');
+</script>
 </header>
 
 <section id="about">
 <h2>About</h2>
-<p><strong>M. AKHIRUDDIN SYAH</strong> adalah individu yang dikenal sebagai M. Akhir. Ia berasal dari Padang Lawas Utara, Sumatera Utara, dan fokus pada pengembangan diri, kepemimpinan, dan personal branding.</p>
+<p><strong>M. AKHIRUDDIN SYAH</strong> dikenal sebagai M. Akhir. Ia berasal dari Padang Lawas Utara, Sumatera Utara, fokus pada pengembangan diri, kepemimpinan, dan personal branding.</p>
 </section>
 
 <section id="education">
@@ -288,6 +206,5 @@ function createConfetti(x,y){
 <footer>
 © 2026 M. AKHIRUDDIN SYAH – Profil Interaktif
 </footer>
-
 </body>
 </html>

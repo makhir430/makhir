@@ -7,9 +7,7 @@
 <meta name="description" content="Profil interaktif M. AKHIRUDDIN SYAH, game lucu, animasi love, pita, nama melayang, musik dan suara bebas hak cipta.">
 <meta name="keywords" content="M. AKHIRUDDIN SYAH, M. Akhir, Web Interaktif, Animasi, Mini Game, Personal Branding, Pink Pastel">
 <meta name="author" content="M. AKHIRUDDIN SYAH">
-
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:#fff;color:#333;font-family:'Montserrat',sans-serif;scroll-behavior:smooth;overflow-x:hidden;position:relative;}
@@ -33,89 +31,13 @@ blockquote{border-left:4px solid #FF69B4;padding-left:15px;font-style:italic;col
 .love{position:absolute;width:20px;height:20px;background:red;clip-path: polygon(50% 0%,61% 14%,75% 14%,85% 28%,100% 44%,75% 85%,50% 100%,25% 85%,0% 44%,15% 28%,25% 14%,39% 14%);animation:fall 5s linear infinite;opacity:0.8;z-index:0;}
 .ribbon{position:absolute;width:40px;height:8px;background:#FFB6C1;border-radius:4px;animation:ribbonMove linear infinite;opacity:0.7;z-index:0;}
 .makhir{position:absolute;font-size:24px;font-weight:bold;color:#FF69B4;opacity:0.8;animation:nameFloat 8s linear infinite;pointer-events:none;z-index:0;}
-.scoreboard{position:fixed;top:90px;right:20px;font-size:20px;font-weight:bold;color:#FF69B4;}
+.scoreboard{position:fixed;top:90px;right:20px;font-size:20px;font-weight:bold;color:#FF69B4;z-index:1000;}
 @keyframes fall{0%{transform:translateY(-50px) rotate(0deg);}100%{transform:translateY(110vh) rotate(360deg);}}
 @keyframes ribbonMove{0%{transform:translateY(-50px) translateX(0px) rotate(0deg);}100%{transform:translateY(110vh) translateX(200px) rotate(360deg);}}
 @keyframes nameFloat{0%{transform:translateY(110vh) translateX(0px) rotate(0deg);}100%{transform:translateY(-50px) translateX(300px) rotate(360deg);}}
 </style>
 </head>
 <body>
-
-<script>
-// Hujan love
-for(let i=0;i<40;i++){
-  let heart=document.createElement('div');
-  heart.className='love';
-  heart.style.left=Math.random()*100+'vw';
-  heart.style.animationDuration=3+Math.random()*5+'s';
-  document.body.appendChild(heart);
-}
-// Ribbon
-for(let i=0;i<30;i++){
-  let rib=document.createElement('div');
-  rib.className='ribbon';
-  rib.style.left=Math.random()*100+'vw';
-  rib.style.animationDuration=4+Math.random()*6+'s';
-  document.body.appendChild(rib);
-}
-// Nama melayang
-for(let i=0;i<25;i++){
-  let name=document.createElement('div');
-  name.className='makhir';
-  name.textContent='Makhir';
-  name.style.left=Math.random()*100+'vw';
-  name.style.fontSize=(12+Math.random()*20)+'px';
-  name.style.animationDuration=(6+Math.random()*5)+'s';
-  document.body.appendChild(name);
-}
-
-// Mini game: Catch Makhir
-let score=0;
-const scoreboard=document.createElement('div');
-scoreboard.className='scoreboard';
-scoreboard.textContent='Score: 0';
-document.body.appendChild(scoreboard);
-
-const clickSound=new Audio('https://cdn.pixabay.com/download/audio/2022/03/15/audio_6a635e7a62.mp3?filename=button-2-7600.mp3');
-
-function spawnMakhir(){
-  let m=document.createElement('div');
-  m.className='makhir';
-  m.textContent='Makhir';
-  m.style.left=Math.random()*80+'vw';
-  m.style.top=Math.random()*80+'vh';
-  m.style.fontSize=(14+Math.random()*25)+'px';
-  m.style.cursor='pointer';
-  document.body.appendChild(m);
-  m.addEventListener('click',()=>{
-    score++;
-    scoreboard.textContent='Score: '+score;
-    createConfetti(parseFloat(m.style.left),parseFloat(m.style.top));
-    clickSound.play();
-    m.remove();
-  });
-  setTimeout(()=>{if(m.parentNode)m.remove();},4000);
-}
-setInterval(spawnMakhir,1500);
-
-// Confetti function
-function createConfetti(x,y){
-  for(let i=0;i<15;i++){
-    let c=document.createElement('div');
-    c.style.position='absolute';
-    c.style.width='6px';
-    c.style.height='6px';
-    c.style.background='#FF69B4';
-    c.style.left=x+Math.random()*30+'px';
-    c.style.top=y+Math.random()*30+'px';
-    c.style.borderRadius='50%';
-    c.style.opacity=0.8;
-    c.style.transition='all 0.5s ease-out';
-    document.body.appendChild(c);
-    setTimeout(()=>c.remove(),600);
-  }
-}
-</script>
 
 <nav>
 <a href="#about">About</a>
@@ -132,11 +54,8 @@ function createConfetti(x,y){
 <h1>M. AKHIRUDDIN SYAH</h1>
 <p><em>Presence. Principle. Power.</em></p>
 <p>Profil interaktif M. Akhir</p>
-<button class="button" onclick="music.play()">Play Music 🎵</button>
+<button class="button" id="playMusic">Play Music 🎵</button>
 <audio id="music" src="https://cdn.pixabay.com/audio/2022/03/15/audio_0e2d2290d1.mp3"></audio>
-<script>
-const music=document.getElementById('music');
-</script>
 </header>
 
 <section id="about">
@@ -200,11 +119,91 @@ const music=document.getElementById('music');
 <h2>Contact</h2>
 <p>Instagram Resmi:</p>
 <p><strong>@makhir._</strong></p>
-<a class="button" onclick="createConfetti(event.clientX,event.clientY)" href="https://instagram.com/makhir._" target="_blank">Visit Instagram</a>
+<a class="button" href="https://instagram.com/makhir._" target="_blank">Visit Instagram</a>
 </section>
 
 <footer>
 © 2026 M. AKHIRUDDIN SYAH – Profil Interaktif
 </footer>
+
+<script>
+// Musik
+const music=document.getElementById('music');
+document.getElementById('playMusic').addEventListener('click',()=>music.play());
+
+// Animasi background
+for(let i=0;i<40;i++){
+  let heart=document.createElement('div');
+  heart.className='love';
+  heart.style.left=Math.random()*100+'vw';
+  heart.style.animationDuration=3+Math.random()*5+'s';
+  document.body.appendChild(heart);
+}
+for(let i=0;i<30;i++){
+  let rib=document.createElement('div');
+  rib.className='ribbon';
+  rib.style.left=Math.random()*100+'vw';
+  rib.style.animationDuration=4+Math.random()*6+'s';
+  document.body.appendChild(rib);
+}
+for(let i=0;i<25;i++){
+  let name=document.createElement('div');
+  name.className='makhir';
+  name.textContent='Makhir';
+  name.style.left=Math.random()*100+'vw';
+  name.style.fontSize=(12+Math.random()*20)+'px';
+  name.style.animationDuration=(6+Math.random()*5)+'s';
+  document.body.appendChild(name);
+}
+
+// Mini game: Catch Makhir
+window.onload=function(){
+  let score=0;
+  const scoreboard=document.createElement('div');
+  scoreboard.className='scoreboard';
+  scoreboard.textContent='Score: 0';
+  document.body.appendChild(scoreboard);
+
+  const clickSound=new Audio('https://cdn.pixabay.com/download/audio/2022/03/15/audio_6a635e7a62.mp3?filename=button-2-7600.mp3');
+
+  function spawnMakhir(){
+    let m=document.createElement('div');
+    m.className='makhir';
+    m.textContent='Makhir';
+    m.style.left=Math.random()*80+'vw';
+    m.style.top=Math.random()*80+'vh';
+    m.style.fontSize=(14+Math.random()*25)+'px';
+    m.style.cursor='pointer';
+    document.body.appendChild(m);
+    m.addEventListener('click',()=>{
+      score++;
+      scoreboard.textContent='Score: '+score;
+      createConfetti(parseFloat(m.style.left),parseFloat(m.style.top));
+      clickSound.play();
+      m.remove();
+    });
+    setTimeout(()=>{if(m.parentNode)m.remove();},4000);
+  }
+  setInterval(spawnMakhir,1500);
+
+  function createConfetti(x,y){
+    for(let i=0;i<15;i++){
+      let c=document.createElement('div');
+      c.style.position='absolute';
+      c.style.width='6px';
+      c.style.height='6px';
+      c.style.background='#FF69B4';
+      c.style.left=x+Math.random()*30+'px';
+      c.style.top=y+Math.random()*30+'px';
+      c.style.borderRadius='50%';
+      c.style.opacity=0.8;
+      c.style.transition='all 0.5s ease-out';
+      document.body.appendChild(c);
+      setTimeout(()=>c.remove(),600);
+    }
+  }
+};
+</script>
+
 </body>
 </html>

@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>M. AKHIRUDDIN SYAH | Web Lucu & Interaktif</title>
-<meta name="description" content="Profil lucu dan interaktif M. AKHIRUDDIN SYAH. Animasi cinta, pita-pita, dan fitur fun siap menghibur pengunjung.">
-<meta name="keywords" content="M. AKHIRUDDIN SYAH, M. Akhir, Web Lucu, Animasi Love, Pita Lucu, Interaktif, Personal Branding">
+<title>M. AKHIRUDDIN SYAH | Profil Interaktif</title>
+<meta name="description" content="Profil interaktif M. AKHIRUDDIN SYAH, dengan animasi lucu, nama melayang, pita, hati, dan mini-game sederhana.">
+<meta name="keywords" content="M. AKHIRUDDIN SYAH, M. Akhir, Web Interaktif, Animasi, Mini Game, Personal Branding, Pink Pastel">
 <meta name="author" content="M. AKHIRUDDIN SYAH">
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
@@ -48,7 +48,6 @@ header{
   align-items:center;
   text-align:center;
   background:linear-gradient(180deg,#FFD1DC,#fff);
-  animation:fade 2s ease-in-out;
   overflow:hidden;
 }
 h1{font-family:'Cinzel',serif;font-size:48px;color:#FF69B4;letter-spacing:3px;margin-bottom:10px;}
@@ -76,7 +75,6 @@ section{padding:80px 20px;max-width:1000px;margin:auto;}
   height:150px;
   object-fit:cover;
   border-radius:10px;
-  transition:transform 0.3s, box-shadow 0.3s;
   background:#FFD1DC;
 }
 .gallery img:hover{
@@ -129,12 +127,7 @@ blockquote{
   opacity:0.8;
   z-index:0;
 }
-@keyframes fall{
-  0%{transform:translateY(-50px) rotate(0deg);}
-  100%{transform:translateY(110vh) rotate(360deg);}
-}
-
-/* Animasi Pita */
+/* Ribbon */
 .ribbon{
   position:absolute;
   width:40px;
@@ -145,32 +138,69 @@ blockquote{
   opacity:0.7;
   z-index:0;
 }
-@keyframes ribbonMove{
-  0%{transform:translateY(-50px) translateX(0px) rotate(0deg);}
-  100%{transform:translateY(110vh) translateX(200px) rotate(360deg);}
+/* Nama melayang */
+.makhir{
+  position:absolute;
+  font-size:24px;
+  font-weight:bold;
+  color:#FF69B4;
+  opacity:0.8;
+  animation:nameFloat 8s linear infinite;
+  pointer-events:none;
+  z-index:0;
 }
 
-@keyframes fade{from{opacity:0;}to{opacity:1;}}
+@keyframes fall{0%{transform:translateY(-50px) rotate(0deg);}100%{transform:translateY(110vh) rotate(360deg);}}
+@keyframes ribbonMove{0%{transform:translateY(-50px) translateX(0px) rotate(0deg);}100%{transform:translateY(110vh) translateX(200px) rotate(360deg);}}
+@keyframes nameFloat{0%{transform:translateY(110vh) translateX(0px) rotate(0deg);}100%{transform:translateY(-50px) translateX(300px) rotate(360deg);}}
 </style>
 </head>
 <body>
 
-<!-- Hearts & Ribbons -->
 <script>
-for(let i=0;i<30;i++){
+// Hujan love
+for(let i=0;i<40;i++){
   let heart=document.createElement('div');
   heart.className='love';
   heart.style.left=Math.random()*100+'vw';
   heart.style.animationDuration=3+Math.random()*5+'s';
-  heart.style.fontSize=10+Math.random()*20+'px';
   document.body.appendChild(heart);
 }
-for(let i=0;i<20;i++){
+// Ribbon
+for(let i=0;i<30;i++){
   let rib=document.createElement('div');
   rib.className='ribbon';
   rib.style.left=Math.random()*100+'vw';
   rib.style.animationDuration=4+Math.random()*6+'s';
   document.body.appendChild(rib);
+}
+// Nama melayang
+for(let i=0;i<25;i++){
+  let name=document.createElement('div');
+  name.className='makhir';
+  name.textContent='Makhir';
+  name.style.left=Math.random()*100+'vw';
+  name.style.fontSize=(12+Math.random()*20)+'px';
+  name.style.animationDuration=(6+Math.random()*5)+'s';
+  document.body.appendChild(name);
+}
+
+// Mini game: catch Makhir
+function createConfetti(x,y){
+  for(let i=0;i<20;i++){
+    let c=document.createElement('div');
+    c.style.position='absolute';
+    c.style.width='6px';
+    c.style.height='6px';
+    c.style.background='#FF69B4';
+    c.style.left=x+Math.random()*30+'px';
+    c.style.top=y+Math.random()*30+'px';
+    c.style.borderRadius='50%';
+    c.style.opacity=0.8;
+    c.style.transition='all 0.5s ease-out';
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),600);
+  }
 }
 </script>
 
@@ -188,13 +218,12 @@ for(let i=0;i<20;i++){
 <header>
 <h1>M. AKHIRUDDIN SYAH</h1>
 <p><em>Presence. Principle. Power.</em></p>
-<p>Profil lucu & interaktif M. Akhir</p>
+<p>Profil interaktif M. Akhir</p>
 </header>
 
 <section id="about">
 <h2>About</h2>
-<p><strong>M. AKHIRUDDIN SYAH</strong> adalah individu yang dikenal sebagai M. Akhir. Ia berasal dari Padang Lawas Utara, Sumatera Utara, Indonesia, dan fokus pada pengembangan diri, kepemimpinan, dan personal branding.</p>
-<p>Dengan konsistensi dan visi jangka panjang, M. AKHIRUDDIN SYAH menjadi inspirasi bagi remaja dan komunitas sekitarnya, menunjukkan bahwa kesuksesan lahir dari disiplin dan integritas yang tinggi.</p>
+<p><strong>M. AKHIRUDDIN SYAH</strong> adalah individu yang dikenal sebagai M. Akhir. Ia berasal dari Padang Lawas Utara, Sumatera Utara, dan fokus pada pengembangan diri, kepemimpinan, dan personal branding.</p>
 </section>
 
 <section id="education">
@@ -215,7 +244,7 @@ for(let i=0;i<20;i++){
 
 <section id="vision">
 <h2>Vision</h2>
-<p>M. AKHIRUDDIN SYAH berkomitmen memberi dampak positif melalui kepemimpinan yang konsisten, pengembangan diri berkelanjutan, dan tindakan nyata.</p>
+<p>M. AKHIRUDDIN SYAH berkomitmen memberi dampak positif melalui kepemimpinan konsisten dan pengembangan diri berkelanjutan.</p>
 </section>
 
 <section id="achievements">
@@ -245,7 +274,7 @@ for(let i=0;i<20;i++){
 <div class="card">
 <h3>Membangun Brand Pribadi Sejak Dini</h3>
 <blockquote>"Nilai dan disiplin membangun fondasi kesuksesan." – M. AKHIRUDDIN SYAH</blockquote>
-<p>Pemahaman terhadap nilai, disiplin, dan visi jangka panjang membantu M. AKHIRUDDIN SYAH membangun personal branding yang kuat dan menginspirasi teman-temannya.</p>
+<p>Pemahaman terhadap nilai, disiplin, dan visi jangka panjang membantu M. AKHIRUDDIN SYAH membangun personal branding yang kuat.</p>
 </div>
 </section>
 
@@ -253,11 +282,11 @@ for(let i=0;i<20;i++){
 <h2>Contact</h2>
 <p>Instagram Resmi:</p>
 <p><strong>@makhir._</strong></p>
-<a class="button" href="https://instagram.com/makhir._" target="_blank">Visit Instagram</a>
+<a class="button" onclick="createConfetti(event.clientX,event.clientY)" href="https://instagram.com/makhir._" target="_blank">Visit Instagram</a>
 </section>
 
 <footer>
-© 2026 M. AKHIRUDDIN SYAH – Web Lucu & Interaktif
+© 2026 M. AKHIRUDDIN SYAH – Profil Interaktif
 </footer>
 
 </body>
